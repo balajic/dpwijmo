@@ -16,6 +16,12 @@ export class MenuSvc {
         var ret =
         [
             {
+                "section": "Home",
+                "links": [
+                    { "text": "DP App", "url": "/", "alias": "DPAppHome" }
+                ]
+            },
+            {
                 "section": "Infrastructure",
                 "links": [
                     { "text": "Introduction", "url": "/infra/intro", "alias": "InfraIntro" },

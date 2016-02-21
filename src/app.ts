@@ -13,6 +13,8 @@ import { SparkSvc } from './services/SparkSvc';
 import { wjNg2Input } from '../scripts/wijmo.angular2/wijmo.angular2.all';
 
 // Sample components
+import { DPAppCmp } from './components/dpapp/DPAppCmp';
+
 // Infrastructure
 import { IntroCmp } from './components/infra/IntroCmp';
 // Input
@@ -52,7 +54,10 @@ export module explorer {
     })
     @RouteConfig([
             //{ path: '/', redirectTo: ['/infra/intro'] },
-            { path: '/', redirectTo: ['InfraIntro'] },
+            //{ path: '/', redirectTo: ['DPAppCmp'] },
+            // DP App Region
+            { path: '/', component: DPAppCmp, as: 'DPAppHome'},
+            
             // Infra
             { path: '/infra/intro', component: IntroCmp, as: 'InfraIntro' },
             // Input
