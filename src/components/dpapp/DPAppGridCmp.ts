@@ -6,7 +6,8 @@ import {QueryKDB} from '../../services/QueryKDB';
   selector : 'DPGrid',
   template : `
       <H3>Query Results</H3>
-      {{HCPList}}
+    <p>This is a FlexGrid control:</p>
+    <div id="theGrid" style="width:100%;height:auto;"></div>      
     `
 })
 
@@ -16,6 +17,11 @@ export class DPAppGridCmp {
 
   constructor(public kdbConn:QueryKDB) {
     kdbConn.getHCPs()
-      .subscribe(res => this.HCPList = JSON.stringify(res), err => console.log('Unable to retrive State List'));
+      .subscribe(res => {
+        console.log('In HCP');
+        this.HCPList = JSON.stringify(res);
+        var grid = new wijmo.grid.FlexGrid('#theGrid');
+        grid.itemsSource = res;
+      }, err => console.log('Unable to retrive gnrl List'));
   }
 }

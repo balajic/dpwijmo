@@ -34,7 +34,9 @@ $http-server
   ** Added DPAppGridCmp -> Data Grid Component inside the App Component.
   Now App Component has two child Components Filter & Grid
   Both USes the QueryKDB Service
-  
+
+### Ver 1.5
+** Integrated the flex grid  
   
 #Quick Reference
 =======================================================================================================================================
