@@ -1,5 +1,6 @@
-import {Component}  from 'angular2/core';
+import {Component}      from 'angular2/core';
 import {DPAppFilterCmp} from './DPAppFilterCmp';
+import {DPAppGridCmp}   from './DPAppGridCmp';
 
 @Component({
   selector : 'dpApp',
@@ -10,7 +11,7 @@ import {DPAppFilterCmp} from './DPAppFilterCmp';
       <hr>
       <DPGrid></DPGrid>
     `,
-  directives: [DPAppFilterCmp]
+  directives: [DPAppFilterCmp, DPAppGridCmp]
 })
 
 export class DPAppCmp {}

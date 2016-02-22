@@ -17,4 +17,11 @@ export class QueryKDB {
     return this.http.get('http://q.rxdatasci.com:5001/.jxo?state')
     .map(res => res.json()); // This just convert the result into the JSON object.
   }
+
+  getHCPs(): any {
+    console.log('kdb gteStates');
+    return this.http.get('http://q.rxdatasci.com:5001/.jxo?gnrl')
+    .map(res => res.json()); // This just convert the result into the JSON object.
+  }
+
 }
