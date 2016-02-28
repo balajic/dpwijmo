@@ -36,7 +36,11 @@ $http-server
   Both USes the QueryKDB Service
 
 ### Ver 1.5
-** Integrated the flex grid  
+** Integrated the flex grid
+
+### Ver 1.5.1
+** Integrated local KDB database. Added favicon.ico + home page icons
+
   
 #Quick Reference
 =======================================================================================================================================
@@ -59,4 +63,17 @@ In the Component class, just import the Service Class and inject it to the const
      It can import & implement the Services class if required.
      Go back to the Parent Class
      Import "NGGridCmp" and  add it to the "directives" section in the @Component decorator
-     Also add the &lt;NGGRID&gt; tag to the parent HTML "template" 
+     Also add the &lt;NGGRID&gt; tag to the parent HTML "template"
+     
+=======================================================================================================================================
+### KDB Commands
+=======================================================================================================================================
+
+q)h:hopen `:localhost:5001
+q)GNRL:h "select from GNRL where i<5000"
+q)save `:GNRL
+-- Loading the table
+q)GNRL: get `:GNRL
+q)state:`state xasc select distinct state:Recipient_State from GNRL
+q)\p 80
+q)\l q-util.q
