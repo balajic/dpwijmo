@@ -24,4 +24,6 @@ export class DPAppGridCmp {
         grid.itemsSource = res;
       }, err => console.log('Unable to retrive gnrl List'));
   }
+  
+  
 }
