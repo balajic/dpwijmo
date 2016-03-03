@@ -18,13 +18,13 @@ export class QueryKDB {
   // Memeber function returs the json Observable and Component consumes it should subscribe to it
   getStates(): any {
     console.log('QueryKDB.getStates()');
-    return this.http.get('http://10.0.1.23/.jxo?state')
+    return this.http.get('http://localhost:5001/.jxo?state')
     .map(res => res.json()); // This just convert the result into the JSON object.
   }
 
   getHCPs(): any {
     console.log('QueryKDB.getHCPs()');
-    return this.http.get('http://10.0.1.23/.jxo?select from GNRL where i<1000')
+    return this.http.get('http://localhost:5001/.jxo?select from GNRL where i<1000')
     .map(res => res.json()); // This just convert the result into the JSON object.
   }
 
