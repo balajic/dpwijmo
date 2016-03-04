@@ -7,6 +7,7 @@ import {QueryKDB} from '../../services/QueryKDB';
       <select [(ngModel)]="kdbConn.state" (click)="refreshGrid()">
         <option *ngFor="#stateObj of stateArr" [value]="stateObj.state">{{stateObj.state}}</option>
       </select>
+      <button (click) ="refreshGrid()">Query</button> 
   `
 })
 
@@ -20,5 +21,6 @@ export class DPAppFilterCmp {
   }
 
   refreshGrid(){
+    alert('clicked');
   }
 }
