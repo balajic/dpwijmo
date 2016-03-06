@@ -14,4 +14,10 @@ import {DPAppGridCmp}   from './DPAppGridCmp';
   directives: [DPAppFilterCmp, DPAppGridCmp]
 })
 
-export class DPAppCmp {}
+export class DPAppCmp {
+//  @ViewChild(DPAppFilterCmp) dpFilter:DPAppFilterCmp;
+  
+//  @ViewChild(DPAppGridCmp)
+//  dpGrid: DPAppGridCmp;
+
+}

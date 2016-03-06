@@ -14,6 +14,7 @@ import {QueryKDB} from '../../services/QueryKDB';
 export class DPAppGridCmp {
 
   public HCPList: String;
+  //public grid: Any;
 
   constructor(public kdbConn:QueryKDB) {
     kdbConn.getHCPs()
@@ -25,5 +26,8 @@ export class DPAppGridCmp {
       }, err => console.log('Unable to retrive gnrl List'));
   }
   
-  
+  //refreshGrid(data: String){
+//    grid.itemsSource = data;
+//  }
+    
 }

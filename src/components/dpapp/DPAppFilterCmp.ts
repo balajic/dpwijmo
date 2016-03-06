@@ -15,6 +15,7 @@ export class DPAppFilterCmp {
 
   public stateArr: Object[];
 
+  //constructor(public kdbConn:QueryKDB, @Inject(() => DPAppCmp) private _dpApp: DPAppCmp ) {
   constructor(public kdbConn:QueryKDB) {
     kdbConn.getStates()
       .subscribe(res => this.stateArr = res, err => console.log('Unable to retrive State List'));
@@ -22,5 +23,6 @@ export class DPAppFilterCmp {
 
   refreshGrid(){
     alert('clicked');
+    //this._dpApp.dpGrid.refreshGrid(JSON.parse('[{"name":"Balaji"},{"name":"Chellappa"}]'));
   }
 }
